@@ -14,7 +14,12 @@ import fr.ensim.dp.cache.ICache;
 
 public class Adaptor extends TileCache {
 
-    ICache cache ;
+    private ICache cache;
+
+    public Adaptor(ICache cache) {
+        this.cache = cache;
+    }
+
     @Override
     public BufferedImage get(URI arg0) throws IOException {
         byte[] bytes = cache.retreive(arg0.toString());

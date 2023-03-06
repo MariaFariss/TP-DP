@@ -8,16 +8,13 @@ import java.util.Map;
 public class Memorycache implements ICache {
     private Map<String, byte[]> map;
     IFilterCache filtercache = null;
-    private static Memorycache singleton;
+    private static Memorycache singleton = new Memorycache();
 
     private Memorycache(){
         map = new HashMap<>();
     }
 
     public static Memorycache getInstance(){
-        if(singleton == null){
-            singleton = new Memorycache();
-        }
         return singleton;
     }
     @Override
