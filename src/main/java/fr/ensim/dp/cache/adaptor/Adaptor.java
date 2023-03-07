@@ -28,6 +28,7 @@ public class Adaptor extends TileCache {
 
         return newBi;
     }
+    
 
     @Override
     public void needMoreMemory() {
