@@ -19,6 +19,7 @@ public class DiskCache implements ICache {
         file = new File(mapType);
         file.mkdir();
     }
+    private DiskCache(){};
 
     public static DiskCache getInstance(String typemap){
         if (!caches.containsKey(typemap)) {

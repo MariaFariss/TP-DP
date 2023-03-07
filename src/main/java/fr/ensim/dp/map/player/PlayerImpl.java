@@ -35,5 +35,5 @@ public class PlayerImpl implements IPlayer{
     @Override
     public void firechangeState(IStatePlayer state) {
         this.state = state;
-    }
+    }   
 }
